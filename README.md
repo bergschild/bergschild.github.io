@@ -1,4 +1,3 @@
-lukedeo.github.io
+bergschild.github.io
 =================
-
-Luke's Github User Page
+Personal Site of Yegor Tkachenko
