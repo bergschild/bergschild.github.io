@@ -2,6 +2,7 @@
 
 ## Computational Marketing
 
+
 + Y. Tkachenko. *Autonomous CRM Control via CLV Approximation with Deep Reinforcement Learning in Discrete and Continuous Action Space*. 2015. [[arXiv Preprint]](http://arxiv.org/abs/1504.01840)
 
 + Y. Tkachenko. *Optimal Allocation of Digital Marketing Budget: the Empirical Bayes Approach*. Published by Journal of Marketing Analytics, 2014. [[Preprint PDF]](./files/preprint_tkachenko.pdf) // [[Palgrave Macmillan]](http://www.palgrave-journals.com/jma/journal/v2/n3/full/jma201414a.html)
