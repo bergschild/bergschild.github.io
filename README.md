@@ -1,3 +1,3 @@
-bergschild.github.io
+bergschild.com / bergschild.github.io
 =================
-Personal Site of Yegor Tkachenko
+Personal Website of Yegor Tkachenko
