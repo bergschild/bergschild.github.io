@@ -11,11 +11,11 @@
 		letter-spacing: 0.025em;
 		line-height: 1.5em;
 	}
-
+	/*
 	header br {
 		display: none;
 	}
-
+	*/
 	header.major {
 		padding-bottom: 1em;
 	}
@@ -35,11 +35,11 @@
 		margin-bottom: 3em;
 		padding: 3em 2.5em;
 	}
-
+		/*
 		.wrapper.special br {
 			display: none;
 		}
-
+		*/
 		.wrapper.style1 {
 			padding: 0 2.5em;
 		}

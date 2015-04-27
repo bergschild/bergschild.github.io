@@ -92,11 +92,11 @@
 		margin-bottom: 2.5em;
 		padding: 2.25em 1.5em;
 	}
-
+		/*
 		.wrapper.special br {
 			display: none;
 		}
-
+		*/
 		.wrapper.style1 {
 			padding: 0 1.5em;
 		}
@@ -131,11 +131,11 @@
 			#banner .inner p {
 				text-align: center;
 			}
-
+			/*
 			#banner .inner br {
 				display: none;
 			}
-
+			*/
 /* Main */
 
 	#main {
