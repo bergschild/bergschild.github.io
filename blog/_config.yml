@@ -1,0 +1,19 @@
+# Site settings
+title: The Blog
+header-img: img/banner.jpg
+editor: Yegor Tkachenko
+email: yegor_t@hotmail.com
+description: "Blog by Yegor Tkachenko. Public Opinion. Computational Marketing. Media Planning."
+baseurl: "/blog"
+url: "http://bergschild.com"
+twitter_username: bergschild
+github_username:  bergschild
+facebook_username:  yegor.tk
+linkedin_username:  pub/yegor-tkachenko/57/703/357
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: pretty
+paginate: 100
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
