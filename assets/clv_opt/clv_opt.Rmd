@@ -1,27 +1,31 @@
 ---
-title: "Logistic Regression for Churn Modeling"
+title: "Logistic Regression for Churn Modeling - edX Marketing Analytics"
 output:
   html_document: default
   html_notebook: default
   pdf_document: default
 ---
-In this notebook we model how customers churn (stop engaging with the firm) to figure out what determines the probability of customer 'exit'. We use logistic regression for this task. We also use the model of churn to calcuate expected profits based on a version of a customer lifetime value model. 
+
+### *Prepared by Yegor Tkachenko*
+### *September 2018 - Columbia University*
+
+In this notebook we model how customers churn (stop engaging with the firm) to figure out what determines the probability of customer 'exit'. We use logistic regression for this task. We also use the model of churn to calculate expected profits based on a version of a customer lifetime value model. 
 
 # Definition
 
-Recall that to 'churn' means to stop a paying relationship with a firm. So, for example, if customer had a contract and did not renew it, he churned. Also note that if $c$ is probability of churn, then $p=1-c$ is the probability that customer will keep trasacting into the next period, that is, a retention rate or retention probability.
+Recall that to 'churn' means to stop a paying relationship with a firm. So, for example, if customer had a contract and did not renew it, he churned. Also note that if $c$ is probability of churn, then $p=1-c$ is the probability that customer will keep transacting into the next period, that is, a retention rate or retention probability.
 
 # Data
 
-The exercise is based on Telco customer churn data provided by IBM, which is publically available here: https://www.ibm.com/communities/analytics/watson-analytics-blog/guide-to-sample-datasets/
+The exercise is based on Telco customer churn data provided by IBM, which is publicly available here: https://www.ibm.com/communities/analytics/watson-analytics-blog/guide-to-sample-datasets/
 
-However, work with the file *telco_churn_data.csv* that has been provided to you on edx site, as it has been modified compared to the original. We begin by reading the data from the file *telco_churn_data.csv* in our working directory.
+However, work with the file [*telco_churn_data.csv*](https://yegortkachenko.com/assets/clv_opt/telco_churn_data.csv) that has been provided to you on edx site, as it has been modified compared to the original. We begin by reading the data from the file *telco_churn_data.csv* in our working directory.
 
 ```{r}
 options(scipen=999) # turn off scientific notation
 set.seed(999) # set seed
 data <- read.csv('telco_churn_data.csv', header=TRUE) # read data
-data <- within(data, Churn <- relevel(Churn, ref = 'No')) # making sure Churn == 'Yes' is coded as 1 and Churn == 'No' as zero, in binary logistic regression
+data$Churn <- relevel(as.factor(data$Churn), ref = 'No') # making sure Churn == 'Yes' is coded as 1 and Churn == 'No' as zero, in binary logistic regression
 head(data,5) # take a look at the data
 ```
 
@@ -127,4 +131,4 @@ We find that the optimal hike in monthly charges is $18.1\%=1.180934-1$ .
 ```{r}
 pf(opt$par, data) - pf(1.0, data)
 ```
-We also see that the hike in charges yields extra $\$36752$ in customer lifetime value.
+We also see that the hike in charges yields extra $\$36,752$ in customer lifetime value.
